@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LogInPage extends StatefulWidget {
-  const LogInPage({Key? key}) : super(key: key);
+class SingUpPage extends StatefulWidget {
+  const SingUpPage({Key? key}) : super(key: key);
 
   static const small_font_size = 12.0;
   static const big_font_size = 25.0;
 
   @override
-  State<LogInPage> createState() => _LogInPageState();
+  State<SingUpPage> createState() => _SingUpPageState();
 }
 
-class _LogInPageState extends State<LogInPage> {
+class _SingUpPageState extends State<SingUpPage> {
   bool _isObscure = false;
   @override
   Widget build(BuildContext context) {
@@ -30,25 +30,31 @@ class _LogInPageState extends State<LogInPage> {
               height: 30,
             ),
             Text(
-              'Log In Now',
+              'Sign Up Now',
               style: GoogleFonts.fjallaOne(
                   textStyle: const TextStyle(
-                fontSize: LogInPage.big_font_size,
+                fontSize: SingUpPage.big_font_size,
               )),
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
-              "Please log in to continue using our app",
+              "Please fill in the details and create account",
               style: GoogleFonts.fjallaOne(
                   textStyle: const TextStyle(
-                fontSize: LogInPage.small_font_size,
+                fontSize: SingUpPage.small_font_size,
                 color: Colors.blueGrey,
               )),
             ),
             const SizedBox(
               height: 35,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Fullname',
+                border: InputBorder.none,
+              ),
             ),
             TextField(
               decoration: InputDecoration(
@@ -75,20 +81,6 @@ class _LogInPageState extends State<LogInPage> {
             const SizedBox(
               height: 5,
             ),
-            Container(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: doNothing,
-                child: Text(
-                  'Forgot password?',
-                  style: TextStyle(
-                    fontSize: LogInPage.small_font_size,
-                    color: Colors.grey,
-                    decoration: TextDecoration.underline,
-                  ),
-                ),
-              ),
-            ),
             ElevatedButton(
               onPressed: doNothing,
               style: ButtonStyle(
@@ -101,7 +93,7 @@ class _LogInPageState extends State<LogInPage> {
                 ),
               ),
               child: Text(
-                "Log In",
+                "Sign up",
                 style: GoogleFonts.fjallaOne(
                   textStyle: const TextStyle(
                     color: Colors.white,
@@ -116,19 +108,19 @@ class _LogInPageState extends State<LogInPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have an account?",
+                  "Already have an account?",
                   style: GoogleFonts.fjallaOne(
                       textStyle: const TextStyle(
-                    fontSize: LogInPage.small_font_size,
+                    fontSize: SingUpPage.small_font_size,
                     color: Colors.blueGrey,
                   )),
                 ),
                 const TextButton(
                   onPressed: doNothing,
                   child: Text(
-                    'sign up',
+                    'Log in',
                     style: TextStyle(
-                      fontSize: LogInPage.small_font_size,
+                      fontSize: SingUpPage.small_font_size,
                       color: Colors.red,
                       decoration: TextDecoration.underline,
                     ),
@@ -143,7 +135,7 @@ class _LogInPageState extends State<LogInPage> {
               "Or Connect With",
               style: GoogleFonts.fjallaOne(
                   textStyle: const TextStyle(
-                fontSize: LogInPage.small_font_size,
+                fontSize: SingUpPage.small_font_size,
                 color: Colors.blueGrey,
               )),
             ),

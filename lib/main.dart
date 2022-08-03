@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'welcome_page.dart';
 import 'log_in_page.dart';
+import 'sign_up_page.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -44,7 +47,14 @@ class MyHomePage extends StatelessWidget {
     // than having to individually change instances of widgets.
     return Scaffold(
       body: Center(
-        child: LogInPage(),
+        child: CarouselSlider(
+          items: [
+            WelcomePage(),
+            SingUpPage(),
+            LogInPage(),
+          ],
+          options: CarouselOptions(height: MediaQuery.of(context).size.height),
+        ),
       ),
     );
   }
