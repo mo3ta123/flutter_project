@@ -14,16 +14,16 @@ class WelcomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(
-              flex: 2,
-              child: Image.asset('assets/icons/AI.png'),
+            Image.asset(
+              'assets/icons/AI.png',
+              height: 90,
             ),
             const SizedBox(
               height: 30,
             ),
-            Expanded(
-              flex: 6,
-              child: Image.asset('assets/images/creativity.png'),
+            Image.asset(
+              'assets/images/creativity.png',
+              height: 270,
             ),
             const SizedBox(
               height: 50,

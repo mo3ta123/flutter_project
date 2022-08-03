@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome_page.dart';
+import 'log_in_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +44,7 @@ class MyHomePage extends StatelessWidget {
     // than having to individually change instances of widgets.
     return Scaffold(
       body: Center(
-        child: WelcomePage(),
+        child: LogInPage(),
       ),
     );
   }
