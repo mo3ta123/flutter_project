@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome_page.dart';
-import 'log_in_page.dart';
-import 'sign_up_page.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'text_app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +25,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
+        textTheme: TextAppTheme.textTheme,
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
@@ -45,17 +44,6 @@ class MyHomePage extends StatelessWidget {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      body: Center(
-        child: CarouselSlider(
-          items: [
-            WelcomePage(),
-            SingUpPage(),
-            LogInPage(),
-          ],
-          options: CarouselOptions(height: MediaQuery.of(context).size.height),
-        ),
-      ),
-    );
+    return const WelcomePage();
   }
 }
