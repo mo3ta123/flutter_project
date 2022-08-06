@@ -20,7 +20,7 @@ class _LogInPageState extends State<LogInPage> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Center(
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
