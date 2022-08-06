@@ -140,26 +140,41 @@ class _SingUpPageState extends State<SingUpPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/icons/facebook.png',
-                      height: 60,
+                    IconButton(
+                      padding: const EdgeInsets.all(0.0),
+                      icon: Image.asset(
+                        'assets/icons/facebook.png',
+                        height: 60,
+                      ),
+                      iconSize: 60,
+                      onPressed: doNothing,
                     ),
                     const SizedBox(
                       width: 10,
                     ),
-                    Image.asset(
-                      'assets/icons/twitter.png',
-                      height: 60,
+                    IconButton(
+                      padding: const EdgeInsets.all(0.0),
+                      icon: Image.asset(
+                        'assets/icons/twitter.png',
+                        height: 60,
+                      ),
+                      iconSize: 60,
+                      onPressed: doNothing,
                     ),
                     const SizedBox(
                       width: 10,
                     ),
-                    Image.asset(
-                      'assets/icons/search.png',
-                      height: 60,
-                    )
+                    IconButton(
+                      padding: const EdgeInsets.all(0.0),
+                      icon: Image.asset(
+                        'assets/icons/search.png',
+                        height: 60,
+                      ),
+                      iconSize: 60,
+                      onPressed: doNothing,
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
